@@ -1,0 +1,68 @@
+﻿Started by user Abhishek Kanade
+
+
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Demo-java-web-app
+The recommended git tool is: NONE
+No credentials specified
+ > /usr/bin/git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Demo-java-web-app/.git # timeout=10
+Fetching changes from the remote Git repository
+ > /usr/bin/git config remote.origin.url https://github.com/Abhikanade17112002/demo-java-web-app-for-jenkins # timeout=10
+Fetching upstream changes from https://github.com/Abhikanade17112002/demo-java-web-app-for-jenkins
+ > /usr/bin/git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > /usr/bin/git fetch --tags --force --progress -- https://github.com/Abhikanade17112002/demo-java-web-app-for-jenkins +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 939c49fd46c864518f00fa3961bf6b84bee87463 (refs/remotes/origin/main)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f 939c49fd46c864518f00fa3961bf6b84bee87463 # timeout=10
+Commit message: "Add maven-war-plugin to pom.xml"
+ > /usr/bin/git rev-list --no-walk 939c49fd46c864518f00fa3961bf6b84bee87463 # timeout=10
+[Demo-java-web-app] $ /usr/share/maven/bin/mvn clean install
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.webappexample:Demo-Java-Web-App[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Demo-Java-Web-App Maven Webapp 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ war ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mDemo-Java-Web-App[0;1m ---[m
+[[1;34mINFO[m] Deleting /var/lib/jenkins/workspace/Demo-java-web-app/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mDemo-Java-Web-App[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/Demo-java-web-app/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mDemo-Java-Web-App[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mDemo-Java-Web-App[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /var/lib/jenkins/workspace/Demo-java-web-app/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mDemo-Java-Web-App[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mDemo-Java-Web-App[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-war-plugin:3.3.2:war[m [1m(default-war)[m @ [36mDemo-Java-Web-App[0;1m ---[m
+[[1;34mINFO[m] Packaging webapp
+[[1;34mINFO[m] Assembling webapp [Demo-Java-Web-App] in [/var/lib/jenkins/workspace/Demo-java-web-app/target/Demo-Java-Web-App]
+[[1;34mINFO[m] Processing war project
+[[1;34mINFO[m] Copying webapp resources [/var/lib/jenkins/workspace/Demo-java-web-app/src/main/webapp]
+[[1;34mINFO[m] Building war: /var/lib/jenkins/workspace/Demo-java-web-app/target/Demo-Java-Web-App.war
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.4:install[m [1m(default-install)[m @ [36mDemo-Java-Web-App[0;1m ---[m
+[[1;34mINFO[m] Installing /var/lib/jenkins/workspace/Demo-java-web-app/target/Demo-Java-Web-App.war to /var/lib/jenkins/.m2/repository/org/webappexample/Demo-Java-Web-App/1.0-SNAPSHOT/Demo-Java-Web-App-1.0-SNAPSHOT.war
+[[1;34mINFO[m] Installing /var/lib/jenkins/workspace/Demo-java-web-app/pom.xml to /var/lib/jenkins/.m2/repository/org/webappexample/Demo-Java-Web-App/1.0-SNAPSHOT/Demo-Java-Web-App-1.0-SNAPSHOT.pom
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  1.965 s
+[[1;34mINFO[m] Finished at: 2025-10-24T05:52:22Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[DeployPublisher][INFO] Attempting to deploy 1 war file(s)
+[DeployPublisher][INFO] Deploying /var/lib/jenkins/workspace/Demo-java-web-app/target/Demo-Java-Web-App.war to container Tomcat 9.x Remote with context Demo-Java-Web-App
+  [/var/lib/jenkins/workspace/Demo-java-web-app/target/Demo-Java-Web-App.war] is not deployed. Doing a fresh deployment.
+  Deploying [/var/lib/jenkins/workspace/Demo-java-web-app/target/Demo-Java-Web-App.war]
+Finished: SUCCESS
